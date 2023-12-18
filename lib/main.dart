@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:weekly_planner/product/init/theme/app_theme_builder.dart';
-
-import 'feature/home/screen/home_screen.dart';
+import 'package:weekly_planner/product/layouts/bottom_bar_layout.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: AppThemeBuilder(context).themeData,
-      home: const HomeScreen(),
+      home: const BottomBarLayout(),
     );
   }
 }
