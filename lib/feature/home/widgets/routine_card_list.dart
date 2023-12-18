@@ -13,6 +13,9 @@ class RoutineCardList extends StatefulWidget {
 
 class _RoutineCardListState extends State<RoutineCardList>
     with RoutineCardListMixin {
+  final int duration = 350;
+  final Curve curve = Curves.linear;
+
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -41,20 +44,16 @@ class _RoutineCardListState extends State<RoutineCardList>
           value = (value * 0.038).clamp(-1, 1);
         }
         return AnimatedOpacity(
-          duration: const Duration(milliseconds: 350),
+          duration: Duration(milliseconds: duration),
+          curve: curve,
           opacity: initialPage == index ? 1 : 0.4,
           child: Transform.rotate(
             angle: math.pi * value,
             child: GestureDetector(
-              onTap: () {},
-              // onTap: () {
-              //   Map<String, dynamic> arguments = {
-              //     "routine": widget.routine,
-              //     "current_date": _dayList[index].date,
-              //   };
-              //   Navigator.of(context)
-              //       .pushNamed(DetailScreen.routeName, arguments: arguments);
-              // },
+              onTap: () {
+                pageController!.animateToPage(index,
+                    duration: Duration(milliseconds: duration), curve: curve);
+              },
               child: RoutineCardItem(
                 date: currentWeek[index],
               ),
