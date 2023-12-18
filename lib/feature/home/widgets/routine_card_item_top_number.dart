@@ -31,7 +31,7 @@ class RoutineCardItemTopNumber extends StatelessWidget {
       ),
       child: Center(
         child: CustomText(
-          text: "5",
+          text: text,
           style: AppThemeGetter(context).textTheme.titleLarge!.copyWith(
                 color: AppThemeGetter(context).colorScheme.primary,
               ),

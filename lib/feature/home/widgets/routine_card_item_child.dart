@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:weekly_planner/product/helpers/date_helpers.dart';
 import 'package:weekly_planner/product/init/theme/app_theme_getter.dart';
 import 'package:weekly_planner/product/widgets/custom_sleek_circular_slider.dart';
 import 'package:weekly_planner/product/widgets/custom_text.dart';
 
 class RoutineCardItemChild extends StatelessWidget {
-  const RoutineCardItemChild({super.key});
+  const RoutineCardItemChild({
+    super.key,
+    required this.date,
+  });
+
+  final DateTime date;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +20,7 @@ class RoutineCardItemChild extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           CustomText(
-            text: "Monday",
+            text: DateHelpers().dayLocalized(date),
             style: AppThemeGetter(context).textTheme.titleSmall!.copyWith(
                   color: AppThemeGetter(context).colorScheme.tertiary,
                 ),

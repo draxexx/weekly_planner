@@ -1,17 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:weekly_planner/feature/home/widgets/routine_card_list.dart';
+import 'package:weekly_planner/product/helpers/date_helpers.dart';
 
 mixin RoutineCardListMixin on State<RoutineCardList> {
   PageController? pageController;
 
   int initialPage = 0;
-  final List<DateTime> _currentWeek = [];
+  List<DateTime> currentWeek = [];
 
-  void _setInitialPage() {
+  // set initial day according to current day
+  void _setInitialDay() {
+    // get current datetime
     DateTime now = DateTime.now();
+
     int count = 0;
-    for (var i in _currentWeek) {
-      if (i.day == now.day && i.month == now.month && i.year == now.year) {
+
+    for (var i in currentWeek) {
+      bool checkDateIsSame = DateHelpers().checkDateIsSame(now, i);
+
+      if (checkDateIsSame) {
         setState(() {
           initialPage = count;
         });
@@ -19,19 +26,29 @@ mixin RoutineCardListMixin on State<RoutineCardList> {
       }
       count++;
     }
+
     setState(() {
-      initialPage = 0;
+      initialPage = count;
     });
+  }
+
+  void _setCurrentWeek() {
+    currentWeek = DateHelpers().getCurrentWeekDates();
   }
 
   @override
   void initState() {
     super.initState();
-    _setInitialPage();
+    // set page controller
     pageController = PageController(
       viewportFraction: 0.8,
       initialPage: initialPage,
     );
+
+    // set current week
+    _setCurrentWeek();
+    // set initial day
+    _setInitialDay();
   }
 
   @override

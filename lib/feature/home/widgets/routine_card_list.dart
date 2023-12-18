@@ -23,8 +23,7 @@ class _RoutineCardListState extends State<RoutineCardList>
         },
         physics: const ClampingScrollPhysics(),
         controller: pageController,
-        // itemCount: _dayList.length,
-        itemCount: 7,
+        itemCount: currentWeek.length,
         itemBuilder: (context, index) {
           return buildSlider(index);
         },
@@ -56,7 +55,9 @@ class _RoutineCardListState extends State<RoutineCardList>
               //   Navigator.of(context)
               //       .pushNamed(DetailScreen.routeName, arguments: arguments);
               // },
-              child: const RoutineCardItem(),
+              child: RoutineCardItem(
+                date: currentWeek[index],
+              ),
             ),
           ),
         );

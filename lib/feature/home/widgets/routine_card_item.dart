@@ -4,23 +4,28 @@ import 'package:weekly_planner/feature/home/widgets/routine_card_item_top_number
 import 'package:weekly_planner/product/widgets/custom_card.dart';
 
 class RoutineCardItem extends StatelessWidget {
-  const RoutineCardItem({super.key});
+  const RoutineCardItem({
+    super.key,
+    required this.date,
+  });
+
+  final DateTime date;
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
         Expanded(
           child: Stack(
             children: [
               CustomCard(
-                child: RoutineCardItemChild(),
+                child: RoutineCardItemChild(date: date),
               ),
               Positioned(
                 top: 20,
                 right: 16,
                 left: 16,
-                child: RoutineCardItemTopNumber(text: "5"),
+                child: RoutineCardItemTopNumber(text: "${date.day}"),
               ),
             ],
           ),
