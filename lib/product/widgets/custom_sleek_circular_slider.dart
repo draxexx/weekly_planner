@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
-import 'package:weekly_planner/product/utils/colors.dart';
+import 'package:weekly_planner/product/init/theme/app_theme_getter.dart';
 import 'package:weekly_planner/product/utils/size_config.dart';
 
 class CustomSleekCircularSlider extends StatelessWidget {
@@ -10,15 +10,15 @@ class CustomSleekCircularSlider extends StatelessWidget {
     this.min = 0,
     this.max = 100,
     this.size = 90,
-    this.trackColor = CustomColors.white,
-    this.progressBarColor = CustomColors.white,
-    this.dotColor = CustomColors.black,
+    this.trackColor,
+    this.progressBarColor,
+    this.dotColor,
     this.trackWidth = 15,
     this.progressBarWidth = 10,
   });
 
   final double initialValue, size, trackWidth, progressBarWidth, min, max;
-  final Color trackColor, progressBarColor, dotColor;
+  final Color? trackColor, progressBarColor, dotColor;
 
   @override
   Widget build(BuildContext context) {
@@ -31,20 +31,21 @@ class CustomSleekCircularSlider extends StatelessWidget {
         startAngle: 100,
         angleRange: 360,
         customColors: CustomSliderColors(
-          trackColor: trackColor,
-          progressBarColor: progressBarColor,
-          dotColor: Colors.black,
+          trackColor:
+              trackColor ?? AppThemeGetter(context).colorScheme.tertiary,
+          progressBarColor:
+              progressBarColor ?? AppThemeGetter(context).colorScheme.primary,
+          dotColor: dotColor ?? AppThemeGetter(context).colorScheme.tertiary,
         ),
         customWidths: CustomSliderWidths(
           trackWidth: trackWidth,
           progressBarWidth: progressBarWidth,
         ),
         infoProperties: InfoProperties(
-          mainLabelStyle: TextStyle(
-            color: CustomColors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: getProportionateScreenWidth(20),
-          ),
+          mainLabelStyle: AppThemeGetter(context).textTheme.bodyLarge!.copyWith(
+                color: AppThemeGetter(context).colorScheme.tertiary,
+                fontWeight: FontWeight.bold,
+              ),
         ),
       ),
     );

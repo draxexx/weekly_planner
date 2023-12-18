@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:weekly_planner/product/init/theme/app_theme_getter.dart';
 import 'package:weekly_planner/product/widgets/custom_sleek_circular_slider.dart';
+import 'package:weekly_planner/product/widgets/custom_text.dart';
 
 class RoutineCardItemChild extends StatelessWidget {
   const RoutineCardItemChild({super.key});
@@ -8,16 +10,31 @@ class RoutineCardItemChild extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(top: 15),
-      child: const Column(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Text("Monday"),
-          CustomSleekCircularSlider(initialValue: 30),
+          CustomText(
+            text: "Monday",
+            style: AppThemeGetter(context).textTheme.titleSmall!.copyWith(
+                  color: AppThemeGetter(context).colorScheme.tertiary,
+                ),
+          ),
+          const CustomSleekCircularSlider(initialValue: 30),
           Column(
             children: [
-              Text("15 tasks left"),
-              SizedBox(height: 5),
-              Text("3 tasks completed"),
+              CustomText(
+                text: "15 tasks left",
+                style: AppThemeGetter(context).textTheme.bodyMedium!.copyWith(
+                      color: AppThemeGetter(context).colorScheme.tertiary,
+                    ),
+              ),
+              const SizedBox(height: 4),
+              CustomText(
+                text: "3 tasks completed",
+                style: AppThemeGetter(context).textTheme.bodyMedium!.copyWith(
+                      color: AppThemeGetter(context).colorScheme.tertiary,
+                    ),
+              ),
             ],
           ),
         ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'package:weekly_planner/product/init/theme/app_theme_builder.dart';
 
 import 'feature/home/screen/home_screen.dart';
 
@@ -15,9 +16,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: AppThemeBuilder(context).themeData,
       home: const HomeScreen(),
     );
   }

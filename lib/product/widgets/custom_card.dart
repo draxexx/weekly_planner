@@ -22,7 +22,7 @@ class CustomCard extends StatelessWidget {
       width: SizeConfig.screenWidth! * width,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(borderRadius),
-        gradient: CustomLinearGradient().linearGradient(),
+        gradient: CustomLinearGradient(context: context).linearGradient(),
         boxShadow: [
           CustomBoxShadow().boxShadow(),
         ],
