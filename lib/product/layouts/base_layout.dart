@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:weekly_planner/product/init/theme/app_theme_getter.dart';
 
 class BaseLayout extends StatelessWidget {
   const BaseLayout({
@@ -12,7 +11,7 @@ class BaseLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppThemeGetter(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: body,
     );
   }

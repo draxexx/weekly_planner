@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
-import 'package:weekly_planner/product/init/theme/app_theme_getter.dart';
 import 'package:weekly_planner/product/utils/size_config.dart';
 
 class CustomSleekCircularSlider extends StatelessWidget {
@@ -31,19 +30,18 @@ class CustomSleekCircularSlider extends StatelessWidget {
         startAngle: 100,
         angleRange: 360,
         customColors: CustomSliderColors(
-          trackColor:
-              trackColor ?? AppThemeGetter(context).colorScheme.tertiary,
+          trackColor: trackColor ?? Theme.of(context).colorScheme.tertiary,
           progressBarColor:
-              progressBarColor ?? AppThemeGetter(context).colorScheme.primary,
-          dotColor: dotColor ?? AppThemeGetter(context).colorScheme.tertiary,
+              progressBarColor ?? Theme.of(context).colorScheme.primary,
+          dotColor: dotColor ?? Theme.of(context).colorScheme.tertiary,
         ),
         customWidths: CustomSliderWidths(
           trackWidth: trackWidth,
           progressBarWidth: progressBarWidth,
         ),
         infoProperties: InfoProperties(
-          mainLabelStyle: AppThemeGetter(context).textTheme.bodyLarge!.copyWith(
-                color: AppThemeGetter(context).colorScheme.tertiary,
+          mainLabelStyle: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                color: Theme.of(context).colorScheme.tertiary,
                 fontWeight: FontWeight.bold,
               ),
         ),

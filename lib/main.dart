@@ -3,6 +3,7 @@ import 'package:get/route_manager.dart';
 import 'package:weekly_planner/product/init/theme/app_theme_builder.dart';
 import 'package:weekly_planner/product/layouts/bottom_bar_layout.dart';
 
+// TODO: animate between page navigation
 void main() {
   runApp(const MyApp());
 }

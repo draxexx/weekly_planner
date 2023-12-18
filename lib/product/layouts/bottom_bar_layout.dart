@@ -1,7 +1,6 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:weekly_planner/feature/home/screen/home_screen.dart';
-import 'package:weekly_planner/product/init/theme/app_theme_getter.dart';
+import 'package:weekly_planner/feature/routine/screen/routine_screen.dart';
 
 class BottomBarLayout extends StatefulWidget {
   const BottomBarLayout({
@@ -28,11 +27,11 @@ class _BottomBarLayoutState extends State<BottomBarLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppThemeGetter(context).colorScheme.background,
-      body: const HomeScreen(),
+      backgroundColor: Theme.of(context).colorScheme.background,
+      body: const RoutineScreen(),
       bottomNavigationBar: ConvexAppBar(
         initialActiveIndex: _index,
-        backgroundColor: AppThemeGetter(context).colorScheme.primary,
+        backgroundColor: Theme.of(context).colorScheme.primary,
         items: [
           // TODO: localize the texts
           _tabItem(icon: Icons.bar_chart, title: "Statistics"),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:weekly_planner/feature/home/widgets/routine_card_item_child.dart';
-import 'package:weekly_planner/feature/home/widgets/routine_card_item_top_number.dart';
+import 'package:weekly_planner/feature/routine/widgets/routine_card_item_child.dart';
+import 'package:weekly_planner/feature/routine/widgets/routine_card_item_top_number.dart';
 import 'package:weekly_planner/product/widgets/custom_card.dart';
 
-class RoutineCardItem extends StatelessWidget {
-  const RoutineCardItem({
+class RoutineCard extends StatelessWidget {
+  const RoutineCard({
     super.key,
     required this.date,
   });

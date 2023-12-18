@@ -1,8 +1,10 @@
 import 'package:flutter/widgets.dart';
-import 'package:weekly_planner/feature/home/mixin/routine_card_list_mixin.dart';
+import 'package:get/route_manager.dart';
+import 'package:weekly_planner/feature/routine/mixin/routine_card_list_mixin.dart';
 import 'dart:math' as math;
 
-import 'package:weekly_planner/feature/home/widgets/routine_card_item.dart';
+import 'package:weekly_planner/feature/routine/widgets/routine_card.dart';
+import 'package:weekly_planner/feature/task/screen/task_screen.dart';
 
 class RoutineCardList extends StatefulWidget {
   const RoutineCardList({super.key});
@@ -51,10 +53,16 @@ class _RoutineCardListState extends State<RoutineCardList>
             angle: math.pi * value,
             child: GestureDetector(
               onTap: () {
+                // animate to the routine card, when you tap on it
                 pageController!.animateToPage(index,
                     duration: Duration(milliseconds: duration), curve: curve);
+
+                // navigate to the task screen
+                if (index == initialPage) {
+                  Get.to(() => const TaskScreen());
+                }
               },
-              child: RoutineCardItem(
+              child: RoutineCard(
                 date: currentWeek[index],
               ),
             ),

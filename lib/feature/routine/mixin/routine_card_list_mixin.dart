@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weekly_planner/feature/home/widgets/routine_card_list.dart';
+import 'package:weekly_planner/feature/routine/widgets/routine_card_list.dart';
 import 'package:weekly_planner/product/helpers/date_helpers.dart';
 
 mixin RoutineCardListMixin on State<RoutineCardList> {

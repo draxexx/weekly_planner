@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:weekly_planner/product/init/theme/app_theme_getter.dart';
 
 class CustomLinearGradient {
   final BuildContext context;
@@ -16,8 +15,8 @@ class CustomLinearGradient {
       end: end,
       colors: colors ??
           [
-            AppThemeGetter(context).colorScheme.secondary,
-            AppThemeGetter(context).colorScheme.primary,
+            Theme.of(context).colorScheme.secondary,
+            Theme.of(context).colorScheme.primary,
           ],
     );
   }

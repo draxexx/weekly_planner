@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:weekly_planner/product/init/theme/app_theme_getter.dart';
 
 class CustomTextStyle {
   final BuildContext context;
@@ -13,7 +12,7 @@ class CustomTextStyle {
   }) {
     return TextStyle(
       fontSize: fontSize,
-      color: AppThemeGetter(context).themeData.primaryColor,
+      color: color ?? Theme.of(context).primaryColor,
       fontWeight: fontWeight,
     );
   }

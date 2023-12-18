@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:weekly_planner/product/init/theme/app_theme_getter.dart';
 import 'package:weekly_planner/product/utils/colors.dart';
 import 'package:weekly_planner/product/utils/custom_box_shadow.dart';
 import 'package:weekly_planner/product/utils/size_config.dart';
@@ -32,8 +31,8 @@ class RoutineCardItemTopNumber extends StatelessWidget {
       child: Center(
         child: CustomText(
           text: text,
-          style: AppThemeGetter(context).textTheme.titleLarge!.copyWith(
-                color: AppThemeGetter(context).colorScheme.primary,
+          style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                color: Theme.of(context).colorScheme.primary,
               ),
           textAlign: TextAlign.center,
         ),
