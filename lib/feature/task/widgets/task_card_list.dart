@@ -7,7 +7,8 @@ class TaskCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 4,
+      padding: const EdgeInsets.all(0),
+      itemCount: 16,
       itemBuilder: ((context, index) => const TaskCard()),
     );
   }

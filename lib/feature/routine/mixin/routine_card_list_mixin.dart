@@ -39,16 +39,16 @@ mixin RoutineCardListMixin on State<RoutineCardList> {
   @override
   void initState() {
     super.initState();
+    // set current week
+    _setCurrentWeek();
+    // set initial day
+    _setInitialDay();
+
     // set page controller
     pageController = PageController(
       viewportFraction: 0.8,
       initialPage: initialPage,
     );
-
-    // set current week
-    _setCurrentWeek();
-    // set initial day
-    _setInitialDay();
   }
 
   @override

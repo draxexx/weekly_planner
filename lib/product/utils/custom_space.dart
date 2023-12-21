@@ -1,32 +1,21 @@
 import 'package:flutter/material.dart';
 
 class CustomSpace {
-  final double small = 4, medium = 8, large = 16;
+  final double small = 4, medium = 8, large = 16, large2x = 32;
 
   // small
-  SizedBox horizontalSmall() {
-    return SizedBox(width: small);
-  }
-
-  SizedBox verticalSmall() {
-    return SizedBox(height: small);
-  }
+  SizedBox get horizontalSmall => SizedBox(width: small);
+  SizedBox get verticalSmall => SizedBox(height: small);
 
   // medium
-  SizedBox horizontalMedium() {
-    return SizedBox(width: medium);
-  }
-
-  SizedBox verticalMedium() {
-    return SizedBox(height: medium);
-  }
+  SizedBox get horizontalMedium => SizedBox(width: medium);
+  SizedBox get verticalMedium => SizedBox(height: medium);
 
   // large
-  SizedBox horizontalLargel() {
-    return SizedBox(width: large);
-  }
+  SizedBox get horizontalLarge => SizedBox(width: large);
+  SizedBox get verticalLarge => SizedBox(height: large);
 
-  SizedBox verticalLarge() {
-    return SizedBox(height: large);
-  }
+  // large 2x
+  SizedBox get horizontalLarge2x => SizedBox(width: large2x);
+  SizedBox get verticalLarge2x => SizedBox(height: large2x);
 }

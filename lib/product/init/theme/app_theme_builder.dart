@@ -18,6 +18,7 @@ class AppThemeBuilder {
           tertiary: CustomColors.white,
           background: CustomColors.background,
           surface: CustomColors.gray,
+          primaryContainer: CustomColors.blue30,
         ),
         cardTheme: const CardTheme(
           color: CustomColors.white,
@@ -34,6 +35,7 @@ class AppThemeBuilder {
           tertiary: CustomColors.white,
           background: CustomColors.background,
           surface: CustomColors.gray,
+          primaryContainer: CustomColors.darkGray30,
         ),
         cardTheme: const CardTheme(
           color: CustomColors.white,

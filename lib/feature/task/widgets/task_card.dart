@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:weekly_planner/feature/task/widgets/task_progress.dart';
 import 'package:weekly_planner/feature/task/widgets/task_remaining_time.dart';
 import 'package:weekly_planner/feature/task/widgets/task_tag_list.dart';
 import 'package:weekly_planner/product/utils/custom_box_shadow.dart';
 import 'package:weekly_planner/product/utils/custom_padding.dart';
+import 'package:weekly_planner/product/utils/custom_radius.dart';
 import 'package:weekly_planner/product/utils/custom_space.dart';
 import 'package:weekly_planner/product/widgets/custom_text.dart';
 
@@ -12,28 +14,45 @@ class TaskCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: CustomPadding().all(),
-      decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.tertiary,
-        boxShadow: [
-          CustomBoxShadow().boxShadow(),
-        ],
-      ),
+      margin: CustomPadding().symmetricLarge,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Row(
-            children: [
-              TaskTagList(),
-              TaskRemainingTime(),
-            ],
-          ),
-          CustomSpace().verticalMedium(),
           CustomText(
-            text: "Create Design System",
+            text: "9.00 AM",
             style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                  fontWeight: FontWeight.bold,
+                  color: Theme.of(context).colorScheme.surface,
                 ),
+          ),
+          CustomSpace().verticalMedium,
+          Container(
+            padding: CustomPadding().allLarge,
+            decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.tertiary,
+              borderRadius: CustomRadius().allMedium,
+              boxShadow: [
+                CustomBoxShadow().boxShadow(),
+              ],
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Row(
+                  children: [
+                    TaskTagList(),
+                    TaskRemainingTime(),
+                  ],
+                ),
+                CustomSpace().verticalMedium,
+                CustomText(
+                  text: "Create Design System",
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+                const TaskProgress(),
+              ],
+            ),
           ),
         ],
       ),

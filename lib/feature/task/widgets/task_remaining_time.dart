@@ -11,7 +11,7 @@ class TaskRemainingTime extends StatelessWidget {
     return Row(
       children: [
         const CustomIcon(icon: Icons.access_time),
-        CustomSpace().horizontalSmall(),
+        CustomSpace().horizontalSmall,
         CustomText(
           text: "4d",
           style: Theme.of(context)

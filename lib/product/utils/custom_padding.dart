@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
 
 class CustomPadding {
-  final double cardPaddingAll = 8;
-  final double horizontal = 8;
-  final double vertical = 4;
+  final double small = 4;
+  final double medium = 8;
+  final double large = 16;
 
-  EdgeInsets all() {
-    return EdgeInsets.all(cardPaddingAll);
-  }
+  EdgeInsets get allMedium => EdgeInsets.all(medium);
+  EdgeInsets get allLarge => EdgeInsets.all(large);
 
-  EdgeInsets symmetric() {
-    return EdgeInsets.symmetric(horizontal: horizontal, vertical: vertical);
-  }
+  EdgeInsets get symmetricMedium =>
+      EdgeInsets.symmetric(horizontal: medium, vertical: small);
+
+  EdgeInsets get symmetricLarge =>
+      EdgeInsets.symmetric(horizontal: large, vertical: medium);
+
+  EdgeInsets get horizontalMedium => EdgeInsets.symmetric(horizontal: medium);
+
+  EdgeInsets get horizontalLarge => EdgeInsets.symmetric(horizontal: large);
+
+  EdgeInsets get rightSmall => EdgeInsets.only(right: small);
+  EdgeInsets get rightMedium => EdgeInsets.only(right: medium);
+  EdgeInsets get rightLarge => EdgeInsets.only(right: large);
 }

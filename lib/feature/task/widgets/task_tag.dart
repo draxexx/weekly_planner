@@ -16,7 +16,8 @@ class TaskTag extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: CustomPadding().symmetric(),
+      margin: CustomPadding().rightMedium,
+      padding: CustomPadding().symmetricMedium,
       decoration: BoxDecoration(
         color: bgColor,
         borderRadius: BorderRadius.circular(16),
