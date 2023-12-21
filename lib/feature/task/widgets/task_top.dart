@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:weekly_planner/product/init/language/locale_keys.g.dart';
 import 'package:weekly_planner/product/utils/custom_linear_gradient.dart';
 import 'package:weekly_planner/product/utils/custom_padding.dart';
 import 'package:weekly_planner/product/utils/custom_space.dart';
@@ -44,9 +46,9 @@ class TaskTop extends StatelessWidget {
               indicatorColor: Theme.of(context).colorScheme.tertiary,
               dividerColor: Colors.transparent,
               tabs: const [
-                TabBarTitle(title: "ONGOING"),
-                TabBarTitle(title: "PENDING"),
-                TabBarTitle(title: "COMPLETED"),
+                TabBarTitle(title: LocaleKeys.tabbar_title_task_ongoing),
+                TabBarTitle(title: LocaleKeys.tabbar_title_task_pending),
+                TabBarTitle(title: LocaleKeys.tabbar_title_task_completed),
               ],
             ),
           ],
@@ -67,7 +69,7 @@ class TabBarTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomText(
-      text: title,
+      text: title.tr(),
       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
             color: Theme.of(context).colorScheme.tertiary,
             fontWeight: FontWeight.bold,

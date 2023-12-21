@@ -1,0 +1,13 @@
+{
+    "tabbar_title":{
+        "task": {
+            "ongoing": "Ongoing",
+            "pending": "Pending",
+            "completed": "Completed"
+        }
+    },
+
+    "task_screen":{
+        "content_title": "My Task"
+    }
+}

@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:weekly_planner/product/init/language/locale_keys.g.dart';
 import 'package:weekly_planner/product/utils/custom_padding.dart';
 import 'package:weekly_planner/product/utils/custom_radius.dart';
 import 'package:weekly_planner/product/utils/custom_space.dart';
@@ -16,7 +18,7 @@ class TaskListTitle extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           CustomText(
-            text: "My Task",
+            text: LocaleKeys.task_screen_content_title.tr(),
             style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
