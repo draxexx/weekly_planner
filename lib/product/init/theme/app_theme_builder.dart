@@ -64,25 +64,40 @@ class AppThemeBuilder {
         color: color,
       ),
       bodyMedium: CustomTextStyle(context).style(
-        fontSize: 16,
+        fontSize: 14,
         color: color,
       ),
       bodyLarge: CustomTextStyle(context).style(
-        fontSize: 20,
+        fontSize: 16,
         color: color,
       ),
       titleSmall: CustomTextStyle(context).style(
-        fontSize: 24,
+        fontSize: 18,
         fontWeight: FontWeight.bold,
         color: color,
       ),
       titleMedium: CustomTextStyle(context).style(
-        fontSize: 32,
+        fontSize: 20,
         fontWeight: FontWeight.bold,
         color: color,
       ),
       titleLarge: CustomTextStyle(context).style(
-        fontSize: 36,
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
+        color: color,
+      ),
+      headlineSmall: CustomTextStyle(context).style(
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
+        color: color,
+      ),
+      headlineMedium: CustomTextStyle(context).style(
+        fontSize: 26,
+        fontWeight: FontWeight.bold,
+        color: color,
+      ),
+      headlineLarge: CustomTextStyle(context).style(
+        fontSize: 28,
         fontWeight: FontWeight.bold,
         color: color,
       ),

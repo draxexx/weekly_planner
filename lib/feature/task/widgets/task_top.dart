@@ -1,61 +1,77 @@
 import 'package:flutter/material.dart';
+import 'package:weekly_planner/product/utils/custom_linear_gradient.dart';
 import 'package:weekly_planner/product/utils/custom_padding.dart';
-import 'package:weekly_planner/product/utils/custom_radius.dart';
 import 'package:weekly_planner/product/utils/custom_space.dart';
 import 'package:weekly_planner/product/widgets/custom_icon.dart';
 import 'package:weekly_planner/product/widgets/custom_text.dart';
 
 class TaskTop extends StatelessWidget {
-  const TaskTop({super.key});
+  const TaskTop({super.key, required this.tabController});
+  final TabController tabController;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: CustomPadding().horizontalLarge,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          CustomText(
-            text: "My Task",
-            style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                  fontWeight: FontWeight.bold,
+      padding: CustomPadding().horizontalLarge,
+      decoration: BoxDecoration(
+        gradient: CustomLinearGradient(context: context)
+            .linearGradient(begin: Alignment.topRight, end: Alignment.topLeft),
+      ),
+      child: SafeArea(
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CustomText(
+                  text: "Projects",
+                  style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                        color: Theme.of(context).colorScheme.tertiary,
+                        fontWeight: FontWeight.bold,
+                      ),
                 ),
-          ),
-          const DateContainer(),
-        ],
+                CustomIcon(
+                  icon: Icons.more_horiz,
+                  color: Theme.of(context).colorScheme.tertiary,
+                  size: 32,
+                ),
+              ],
+            ),
+            CustomSpace().verticalLarge2x,
+            TabBar(
+              controller: tabController,
+              labelPadding: CustomPadding().bottomSmall,
+              indicatorColor: Theme.of(context).colorScheme.tertiary,
+              dividerColor: Colors.transparent,
+              tabs: const [
+                TabBarTitle(title: "ONGOING"),
+                TabBarTitle(title: "PENDING"),
+                TabBarTitle(title: "COMPLETED"),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
 }
 
-class DateContainer extends StatelessWidget {
-  const DateContainer({
+class TabBarTitle extends StatelessWidget {
+  const TabBarTitle({
     super.key,
+    required this.title,
   });
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: CustomPadding().symmetricMedium,
-      decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.primaryContainer,
-        borderRadius: CustomRadius().allSmall,
-      ),
-      child: Row(
-        children: [
-          CustomIcon(
-            icon: Icons.date_range,
-            color: Theme.of(context).colorScheme.primary,
+    return CustomText(
+      text: title,
+      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+            color: Theme.of(context).colorScheme.tertiary,
+            fontWeight: FontWeight.bold,
           ),
-          CustomSpace().horizontalSmall,
-          CustomText(
-            text: "15 March",
-            style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                  color: Theme.of(context).colorScheme.primary,
-                ),
-          ),
-        ],
-      ),
     );
   }
 }
