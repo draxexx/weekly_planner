@@ -8,6 +8,9 @@
     },
 
     "task_screen":{
-        "content_title": "My Task"
+        "content_title": "My Task",
+        "task_card": {
+            "subtasks": "Subtasks"
+        }
     }
 }

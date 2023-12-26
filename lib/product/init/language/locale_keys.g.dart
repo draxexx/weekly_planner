@@ -7,6 +7,8 @@ abstract class  LocaleKeys {
   static const tabbar_title_task = 'tabbar_title.task';
   static const tabbar_title = 'tabbar_title';
   static const task_screen_content_title = 'task_screen.content_title';
+  static const task_screen_task_card_subtasks = 'task_screen.task_card.subtasks';
+  static const task_screen_task_card = 'task_screen.task_card';
   static const task_screen = 'task_screen';
 
 }

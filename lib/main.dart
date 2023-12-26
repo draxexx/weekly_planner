@@ -7,6 +7,8 @@ import 'package:weekly_planner/product/init/theme/app_theme_builder.dart';
 import 'package:weekly_planner/product/layouts/bottom_bar_layout.dart';
 
 // TODO: animate between page navigation
+// TODO: add app review and update messages
+// TODO: add google analytics, track user behaviors
 void main() async {
   await ApplicationInitialize().make();
   runApp(ProductLocalization(child: const MyApp()));

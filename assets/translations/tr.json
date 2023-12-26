@@ -1,13 +1,16 @@
 {
     "tabbar_title":{
         "task": {
-            "ongoing": "Ongoing",
-            "pending": "Pending",
-            "completed": "Completed"
+            "ongoing": "Yapılacaklar",
+            "pending": "Devam Ediyor",
+            "completed": "Tamamlandı"
         }
     },
 
     "task_screen":{
-        "content_title": "My Task"
+        "content_title": "Yapılacaklarım",
+        "task_card": {
+            "subtasks": "Alt Görevler"
+        }
     }
 }
