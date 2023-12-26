@@ -28,4 +28,20 @@ class CustomPadding {
   EdgeInsets get bottomSmall => EdgeInsets.only(bottom: small);
   EdgeInsets get bottomMedium => EdgeInsets.only(bottom: medium);
   EdgeInsets get bottomLarge => EdgeInsets.only(bottom: large);
+
+  // except bottom
+  EdgeInsets get exceptBottomSmall =>
+      EdgeInsets.only(top: small, right: small, left: small);
+  EdgeInsets get exceptBottomMedium =>
+      EdgeInsets.only(top: medium, right: medium, left: medium);
+  EdgeInsets get exceptBottomLarge =>
+      EdgeInsets.only(top: large, right: large, left: large);
+
+  // except top
+  EdgeInsets get exceptTopSmall =>
+      EdgeInsets.only(bottom: small, right: small, left: small);
+  EdgeInsets get exceptTopMedium =>
+      EdgeInsets.only(bottom: medium, right: medium, left: medium);
+  EdgeInsets get exceptTopLarge =>
+      EdgeInsets.only(bottom: large, right: large, left: large);
 }

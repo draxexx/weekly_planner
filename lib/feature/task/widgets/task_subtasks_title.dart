@@ -8,9 +8,11 @@ class TaskSubtasksTitle extends StatelessWidget {
   const TaskSubtasksTitle({
     super.key,
     required this.onTap,
+    required this.isExpanded,
   });
 
   final void Function()? onTap;
+  final bool isExpanded;
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +26,9 @@ class TaskSubtasksTitle extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyMedium!,
             textAlign: TextAlign.center,
           ),
-          const CustomIcon(
-            icon: Icons.arrow_drop_down_sharp,
+          CustomIcon(
+            icon:
+                isExpanded ? Icons.arrow_drop_up : Icons.arrow_drop_down_sharp,
             size: 24,
           ),
         ],

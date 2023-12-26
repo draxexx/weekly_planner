@@ -9,6 +9,7 @@ import 'package:weekly_planner/product/layouts/bottom_bar_layout.dart';
 // TODO: animate between page navigation
 // TODO: add app review and update messages
 // TODO: add google analytics, track user behaviors
+// TODO: create your own widget package: circle image, expansiontile...
 void main() async {
   await ApplicationInitialize().make();
   runApp(ProductLocalization(child: const MyApp()));
