@@ -28,6 +28,7 @@ class _TaskCardState extends State<TaskCard> with TickerProviderStateMixin {
 
   bool _isExpanded = false;
 
+  // expand subtasks container
   void _expandSubTasks() async {
     _isExpanded ? _controller.reverse() : _controller.forward();
 
@@ -50,65 +51,88 @@ class _TaskCardState extends State<TaskCard> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          margin: CustomPadding().exceptBottomLarge,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              CustomText(
-                text: "9.00 AM",
-                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      color: Theme.of(context).colorScheme.surface,
-                    ),
-              ),
-              CustomSpace().verticalMedium,
-              Container(
-                padding: CustomPadding().allLarge,
-                decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.tertiary,
-                  borderRadius: _isExpanded
-                      ? CustomRadius().topMedium
-                      : CustomRadius().allMedium,
-                  boxShadow: [
-                    CustomBoxShadow().boxShadow(),
-                  ],
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Row(
-                      children: [
-                        TaskTagList(),
-                        TaskRemainingTime(),
-                      ],
-                    ),
-                    CustomSpace().verticalMedium,
-                    CustomText(
-                      text: "Create Design System",
-                      style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                            fontWeight: FontWeight.bold,
-                          ),
-                    ),
-                    const TaskProgress(),
-                    CustomSpace().verticalMedium,
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        TaskSubtasksTitle(
-                          onTap: _expandSubTasks,
-                          isExpanded: _isExpanded,
-                        ),
-                        const TaskCardIconButtons(),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
+        _taskMainCard(),
         TaskSubtasksContainer(controller: _controller, animation: _animation),
       ],
+    );
+  }
+
+  Widget _taskMainCard() {
+    return Container(
+      margin: CustomPadding().exceptBottomLarge,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _taskTime(),
+          CustomSpace().verticalMedium,
+          _taskContainer(),
+        ],
+      ),
+    );
+  }
+
+  Container _taskContainer() {
+    return Container(
+      padding: CustomPadding().allLarge,
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.tertiary,
+        borderRadius:
+            _isExpanded ? CustomRadius().topMedium : CustomRadius().allMedium,
+        boxShadow: [
+          CustomBoxShadow().boxShadow(),
+        ],
+      ),
+      child: _taskColumn(),
+    );
+  }
+
+  Column _taskColumn() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Row(
+          children: [
+            TaskTagList(),
+            TaskRemainingTime(),
+          ],
+        ),
+        CustomSpace().verticalMedium,
+        _taskTitle(),
+        const TaskProgress(),
+        CustomSpace().verticalMedium,
+        _taskBottom(),
+      ],
+    );
+  }
+
+  Row _taskBottom() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        TaskSubtasksTitle(
+          onTap: _expandSubTasks,
+          isExpanded: _isExpanded,
+        ),
+        const TaskCardIconButtons(),
+      ],
+    );
+  }
+
+  CustomText _taskTitle() {
+    return CustomText(
+      text: "Create Design System",
+      style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+            fontWeight: FontWeight.bold,
+          ),
+    );
+  }
+
+  CustomText _taskTime() {
+    return CustomText(
+      text: "9.00 AM - 11.00 AM",
+      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+            color: Theme.of(context).colorScheme.surface,
+          ),
     );
   }
 }
