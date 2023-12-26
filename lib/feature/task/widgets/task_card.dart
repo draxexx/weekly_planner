@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weekly_planner/feature/task/widgets/task_card_icon_buttons.dart';
 import 'package:weekly_planner/feature/task/widgets/task_progress.dart';
 import 'package:weekly_planner/feature/task/widgets/task_remaining_time.dart';
 import 'package:weekly_planner/feature/task/widgets/task_subtasks_title.dart';
@@ -53,8 +54,14 @@ class TaskCard extends StatelessWidget {
                 ),
                 const TaskProgress(),
                 CustomSpace().verticalMedium,
-                TaskSubtasksTitle(
-                  onTap: () => debugPrint("open subtasks"),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    TaskSubtasksTitle(
+                      onTap: () => debugPrint("open subtasks"),
+                    ),
+                    const TaskCardIconButtons(),
+                  ],
                 ),
               ],
             ),
