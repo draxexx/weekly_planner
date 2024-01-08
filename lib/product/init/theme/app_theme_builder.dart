@@ -25,6 +25,7 @@ class AppThemeBuilder {
         ),
         primaryColor: CustomColors.black,
         secondaryHeaderColor: CustomColors.white,
+        unselectedWidgetColor: CustomColors.lightGray,
         textTheme: textTheme(color: CustomColors.black),
       );
 
@@ -42,6 +43,7 @@ class AppThemeBuilder {
         ),
         primaryColor: CustomColors.black,
         secondaryHeaderColor: CustomColors.white,
+        unselectedWidgetColor: CustomColors.lightGray,
         textTheme: textTheme(color: CustomColors.black),
       );
 

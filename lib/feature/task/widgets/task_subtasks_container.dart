@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weekly_planner/feature/task/widgets/subtask_list.dart';
 import 'package:weekly_planner/product/utils/custom_box_shadow.dart';
 import 'package:weekly_planner/product/utils/custom_padding.dart';
 import 'package:weekly_planner/product/utils/custom_radius.dart';
@@ -19,7 +20,6 @@ class TaskSubtasksContainer extends StatelessWidget {
     return SizeTransition(
       sizeFactor: animation,
       child: Container(
-        height: 100,
         margin: CustomPadding().exceptTopLarge,
         padding: CustomPadding().allLarge,
         decoration: BoxDecoration(
@@ -30,7 +30,10 @@ class TaskSubtasksContainer extends StatelessWidget {
           ],
         ),
         child: const Column(
-          children: [CustomDivider()],
+          children: [
+            CustomDivider(),
+            SubtaskList(),
+          ],
         ),
       ),
     );

@@ -19,6 +19,11 @@ class CustomPadding {
   EdgeInsets get horizontalMedium => EdgeInsets.symmetric(horizontal: medium);
   EdgeInsets get horizontalLarge => EdgeInsets.symmetric(horizontal: large);
 
+  // vertical
+  EdgeInsets get verticalSmall => EdgeInsets.symmetric(vertical: small);
+  EdgeInsets get verticalMedium => EdgeInsets.symmetric(vertical: medium);
+  EdgeInsets get verticalLarge => EdgeInsets.symmetric(vertical: large);
+
   // right
   EdgeInsets get rightSmall => EdgeInsets.only(right: small);
   EdgeInsets get rightMedium => EdgeInsets.only(right: medium);

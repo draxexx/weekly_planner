@@ -9,8 +9,10 @@ abstract class CustomColors {
   static const Color darkGray = Color(0xFF0e1c26);
   static const Color darkGray30 = Color(0x4d0e1c26);
   static const Color gray = Color(0xFF294861);
+  static const Color lightGray = Color(0xFFbdc3c7);
   static const Color background = Color(0xFFf5f6fa);
   static const Color red = Color(0xFFeb4d4b);
   static const Color red30 = Color(0x4deb4d4b);
   static const Color gray30 = Color(0x4d294861);
+  static const Color green = Color(0xFF2ecc71);
 }

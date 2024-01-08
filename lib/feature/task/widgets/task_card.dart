@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:weekly_planner/feature/task/widgets/task_card_icon_buttons.dart';
 import 'package:weekly_planner/feature/task/widgets/task_progress.dart';
 import 'package:weekly_planner/feature/task/widgets/task_remaining_time.dart';
 import 'package:weekly_planner/feature/task/widgets/task_subtasks_container.dart';
@@ -9,6 +8,7 @@ import 'package:weekly_planner/product/utils/custom_box_shadow.dart';
 import 'package:weekly_planner/product/utils/custom_padding.dart';
 import 'package:weekly_planner/product/utils/custom_radius.dart';
 import 'package:weekly_planner/product/utils/custom_space.dart';
+import 'package:weekly_planner/product/widgets/custom_icon.dart';
 import 'package:weekly_planner/product/widgets/custom_text.dart';
 
 class TaskCard extends StatefulWidget {
@@ -113,7 +113,10 @@ class _TaskCardState extends State<TaskCard> with TickerProviderStateMixin {
           onTap: _expandSubTasks,
           isExpanded: _isExpanded,
         ),
-        const TaskCardIconButtons(),
+        const CustomIcon(
+          icon: Icons.more_horiz,
+          size: 32,
+        ),
       ],
     );
   }
