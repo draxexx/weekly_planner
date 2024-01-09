@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weekly_planner/feature/task/widgets/task_notification_icon.dart';
 import 'package:weekly_planner/feature/task/widgets/task_tag.dart';
 import 'package:weekly_planner/product/utils/colors.dart';
 
@@ -11,7 +12,7 @@ class TaskTagList extends StatelessWidget {
       child: Row(
         children: [
           TaskTag(
-            text: "UI Design",
+            text: "Great Designer",
             bgColor: CustomColors.gray30,
             textColor: CustomColors.gray,
           ),
@@ -20,6 +21,7 @@ class TaskTagList extends StatelessWidget {
             bgColor: CustomColors.red30,
             textColor: CustomColors.red,
           ),
+          TaskNotificationIcon(),
         ],
       ),
     );
