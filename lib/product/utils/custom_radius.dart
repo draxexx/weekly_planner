@@ -4,6 +4,7 @@ class CustomRadius {
   final double _small = 4;
   final double _medium = 8;
   final double _large = 16;
+  final double _large2x = 32;
 
   BorderRadius get allSmall => BorderRadius.circular(_small);
   BorderRadius get allMedium => BorderRadius.circular(_medium);
@@ -35,5 +36,9 @@ class CustomRadius {
   BorderRadius get topLarge => BorderRadius.only(
         topLeft: Radius.circular(_large),
         topRight: Radius.circular(_large),
+      );
+  BorderRadius get topLarge2x => BorderRadius.only(
+        topLeft: Radius.circular(_large2x),
+        topRight: Radius.circular(_large2x),
       );
 }

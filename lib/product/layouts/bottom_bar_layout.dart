@@ -1,6 +1,8 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:weekly_planner/feature/routine/screen/routine_screen.dart';
+import 'package:weekly_planner/feature/task/widgets/create_task.dart';
+import 'package:weekly_planner/product/utils/custom_bottom_sheet.dart';
 
 class BottomBarLayout extends StatefulWidget {
   const BottomBarLayout({
@@ -16,7 +18,9 @@ class _BottomBarLayoutState extends State<BottomBarLayout> {
 
   void _onTap(int index) {
     if (_index == 1 && index == 1) {
-      print("add task");
+      // show create task bottom sheet
+      CustomBottomSheet(context: context)
+          .showCustomBottomSheet(const CreateTask());
     }
 
     setState(() {
