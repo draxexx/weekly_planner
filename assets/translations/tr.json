@@ -12,5 +12,9 @@
         "task_card": {
             "subtasks": "Alt Görevler"
         }
+    },
+
+    "button_title": {
+        "save": "Kaydet"
     }
 }

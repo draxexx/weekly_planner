@@ -4,6 +4,7 @@ class CustomPadding {
   final double small = 4;
   final double medium = 8;
   final double large = 16;
+  final double large2x = 32;
 
   // all
   EdgeInsets get allMedium => EdgeInsets.all(medium);
@@ -14,6 +15,8 @@ class CustomPadding {
       EdgeInsets.symmetric(horizontal: medium, vertical: small);
   EdgeInsets get symmetricLarge =>
       EdgeInsets.symmetric(horizontal: large, vertical: medium);
+  EdgeInsets get symmetricLarge2x =>
+      EdgeInsets.symmetric(horizontal: large2x, vertical: large2x);
 
   // horizontal
   EdgeInsets get horizontalMedium => EdgeInsets.symmetric(horizontal: medium);

@@ -10,5 +10,7 @@ abstract class  LocaleKeys {
   static const task_screen_task_card_subtasks = 'task_screen.task_card.subtasks';
   static const task_screen_task_card = 'task_screen.task_card';
   static const task_screen = 'task_screen';
+  static const button_title_save = 'button_title.save';
+  static const button_title = 'button_title';
 
 }

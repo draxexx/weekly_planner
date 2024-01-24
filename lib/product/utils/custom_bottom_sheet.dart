@@ -21,7 +21,7 @@ class CustomBottomSheet {
         ),
         child: Container(
           width: SizeConfig.screenWidth,
-          padding: CustomPadding().symmetricLarge,
+          padding: CustomPadding().symmetricLarge2x,
           decoration: BoxDecoration(
             borderRadius: CustomRadius().topLarge2x,
             color: backgroundColor ?? Theme.of(context).colorScheme.background,

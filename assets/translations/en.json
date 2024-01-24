@@ -12,5 +12,9 @@
         "task_card": {
             "subtasks": "Subtasks"
         }
+    },
+
+    "button_title": {
+        "save": "Save"
     }
 }
