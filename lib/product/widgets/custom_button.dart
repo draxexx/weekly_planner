@@ -8,11 +8,13 @@ class CustomButton extends StatelessWidget {
     required this.onPressed,
     required this.text,
     this.btnHeight = 48,
+    this.backgroundColor,
   });
 
   final void Function()? onPressed;
   final String text;
   final double btnHeight;
+  final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class CustomButton extends StatelessWidget {
       ),
       style: ButtonStyle(
         backgroundColor: MaterialStateColor.resolveWith((states) {
-          return Theme.of(context).colorScheme.primary;
+          return backgroundColor ?? Theme.of(context).colorScheme.primary;
         }),
         minimumSize: MaterialStateProperty.resolveWith((states) {
           return Size.fromHeight(getProportionateScreenWidth(btnHeight));
