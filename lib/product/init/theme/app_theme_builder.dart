@@ -75,32 +75,32 @@ class AppThemeBuilder {
       ),
       titleSmall: DraxexTextStyle(context).style(
         fontSize: 18,
-        fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.w700,
         color: color,
       ),
       titleMedium: DraxexTextStyle(context).style(
         fontSize: 20,
-        fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.w700,
         color: color,
       ),
       titleLarge: DraxexTextStyle(context).style(
         fontSize: 22,
-        fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.w700,
         color: color,
       ),
       headlineSmall: DraxexTextStyle(context).style(
         fontSize: 24,
-        fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.w700,
         color: color,
       ),
       headlineMedium: DraxexTextStyle(context).style(
         fontSize: 26,
-        fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.w700,
         color: color,
       ),
       headlineLarge: DraxexTextStyle(context).style(
         fontSize: 28,
-        fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.w700,
         color: color,
       ),
     );
