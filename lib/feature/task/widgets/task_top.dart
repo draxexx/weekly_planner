@@ -1,11 +1,7 @@
+import 'package:draxex_flutter_template/draxex.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:weekly_planner/product/init/language/locale_keys.g.dart';
-import 'package:weekly_planner/product/utils/custom_linear_gradient.dart';
-import 'package:weekly_planner/product/utils/custom_padding.dart';
-import 'package:weekly_planner/product/utils/custom_space.dart';
-import 'package:weekly_planner/product/widgets/custom_icon.dart';
-import 'package:weekly_planner/product/widgets/custom_text.dart';
 
 class TaskTop extends StatelessWidget {
   const TaskTop({super.key, required this.tabController});
@@ -14,9 +10,9 @@ class TaskTop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: CustomPadding().horizontalLarge,
+      padding: DraxexPadding().horizontalLarge,
       decoration: BoxDecoration(
-        gradient: CustomLinearGradient(context: context)
+        gradient: DraxexLinearGradient(context: context)
             .linearGradient(begin: Alignment.topRight, end: Alignment.topLeft),
       ),
       child: SafeArea(
@@ -25,24 +21,24 @@ class TaskTop extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CustomText(
+                DraxexText(
                   text: "Projects",
                   style: Theme.of(context).textTheme.titleSmall!.copyWith(
                         color: Theme.of(context).colorScheme.tertiary,
                         fontWeight: FontWeight.bold,
                       ),
                 ),
-                CustomIcon(
+                DraxexIcon(
                   icon: Icons.more_horiz,
                   color: Theme.of(context).colorScheme.tertiary,
                   size: 32,
                 ),
               ],
             ),
-            CustomSpace().verticalLarge2x,
+            DraxexSpace().verticalLarge2x,
             TabBar(
               controller: tabController,
-              labelPadding: CustomPadding().bottomSmall,
+              labelPadding: DraxexPadding().bottomSmall,
               indicatorColor: Theme.of(context).colorScheme.tertiary,
               dividerColor: Colors.transparent,
               tabs: const [
@@ -68,7 +64,7 @@ class TabBarTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomText(
+    return DraxexText(
       text: title.tr(),
       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
             color: Theme.of(context).colorScheme.tertiary,

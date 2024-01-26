@@ -1,7 +1,7 @@
+import 'package:draxex_flutter_template/draxex.dart';
 import 'package:flutter/material.dart';
 import 'package:weekly_planner/feature/routine/widgets/routine_card_item_child.dart';
 import 'package:weekly_planner/feature/routine/widgets/routine_card_item_top_number.dart';
-import 'package:weekly_planner/product/widgets/custom_card.dart';
 
 class RoutineCard extends StatelessWidget {
   const RoutineCard({
@@ -18,7 +18,7 @@ class RoutineCard extends StatelessWidget {
         Expanded(
           child: Stack(
             children: [
-              CustomCard(
+              DraxexCard(
                 child: RoutineCardItemChild(date: date),
               ),
               Positioned(

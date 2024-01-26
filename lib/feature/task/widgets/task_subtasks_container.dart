@@ -1,9 +1,6 @@
+import 'package:draxex_flutter_template/draxex.dart';
 import 'package:flutter/material.dart';
 import 'package:weekly_planner/feature/task/widgets/subtask_list.dart';
-import 'package:weekly_planner/product/utils/custom_box_shadow.dart';
-import 'package:weekly_planner/product/utils/custom_padding.dart';
-import 'package:weekly_planner/product/utils/custom_radius.dart';
-import 'package:weekly_planner/product/widgets/custom_divider.dart';
 
 class TaskSubtasksContainer extends StatelessWidget {
   const TaskSubtasksContainer({
@@ -20,18 +17,18 @@ class TaskSubtasksContainer extends StatelessWidget {
     return SizeTransition(
       sizeFactor: animation,
       child: Container(
-        margin: CustomPadding().exceptTopLarge,
-        padding: CustomPadding().allLarge,
+        margin: DraxexPadding().exceptTopLarge,
+        padding: DraxexPadding().allLarge,
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.tertiary,
-          borderRadius: CustomRadius().bottomMedium,
+          borderRadius: DraxexRadius().bottomMedium,
           boxShadow: [
-            CustomBoxShadow().boxShadow(),
+            DraxexBoxShadow().boxShadow(),
           ],
         ),
         child: const Column(
           children: [
-            CustomDivider(),
+            DraxexDivider(),
             SubtaskList(),
           ],
         ),

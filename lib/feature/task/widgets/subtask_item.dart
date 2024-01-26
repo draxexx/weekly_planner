@@ -1,10 +1,6 @@
+import 'package:draxex_flutter_template/draxex.dart';
 import 'package:flutter/material.dart';
 import 'package:weekly_planner/feature/task/mixin/subtask_item_mixin.dart';
-import 'package:weekly_planner/product/utils/custom_padding.dart';
-import 'package:weekly_planner/product/utils/custom_space.dart';
-import 'package:weekly_planner/product/widgets/custom_icon.dart';
-import 'package:weekly_planner/product/widgets/custom_icon_button.dart';
-import 'package:weekly_planner/product/widgets/custom_text.dart';
 
 class SubtaskItem extends StatefulWidget {
   const SubtaskItem({super.key});
@@ -19,14 +15,14 @@ class _SubtaskItemState extends State<SubtaskItem> with SubtaskItemMixin {
     return GestureDetector(
       onTap: toggle,
       child: Padding(
-        padding: CustomPadding().verticalSmall,
+        padding: DraxexPadding().verticalSmall,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _checkCircle(context),
-            CustomSpace().horizontalSmall,
+            DraxexSpace().horizontalSmall,
             _subtaskTitle(context),
-            CustomSpace().horizontalSmall,
+            DraxexSpace().horizontalSmall,
             _editButton,
           ],
         ),
@@ -34,12 +30,12 @@ class _SubtaskItemState extends State<SubtaskItem> with SubtaskItemMixin {
     );
   }
 
-  CustomIconButton get _editButton =>
-      CustomIconButton(icon: Icons.edit, onTap: () {});
+  DraxexIconButton get _editButton =>
+      DraxexIconButton(icon: Icons.edit, onTap: () {});
 
   Expanded _subtaskTitle(BuildContext context) {
     return Expanded(
-      child: CustomText(
+      child: DraxexText(
         text: "Random Subtasks",
         style: Theme.of(context).textTheme.bodyLarge!.copyWith(
             decoration:
@@ -51,8 +47,8 @@ class _SubtaskItemState extends State<SubtaskItem> with SubtaskItemMixin {
     );
   }
 
-  CustomIcon _checkCircle(BuildContext context) {
-    return CustomIcon(
+  DraxexIcon _checkCircle(BuildContext context) {
+    return DraxexIcon(
       icon: Icons.check_circle,
       color: isSelected
           ? Theme.of(context).colorScheme.secondary

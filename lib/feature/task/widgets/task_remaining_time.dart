@@ -1,7 +1,5 @@
+import 'package:draxex_flutter_template/draxex.dart';
 import 'package:flutter/material.dart';
-import 'package:weekly_planner/product/utils/custom_space.dart';
-import 'package:weekly_planner/product/widgets/custom_icon.dart';
-import 'package:weekly_planner/product/widgets/custom_text.dart';
 
 class TaskRemainingTime extends StatelessWidget {
   const TaskRemainingTime({super.key});
@@ -10,9 +8,9 @@ class TaskRemainingTime extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const CustomIcon(icon: Icons.access_time),
-        CustomSpace().horizontalSmall,
-        CustomText(
+        const DraxexIcon(icon: Icons.access_time),
+        DraxexSpace().horizontalSmall,
+        DraxexText(
           text: "4d",
           style: Theme.of(context)
               .textTheme

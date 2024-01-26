@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weekly_planner/product/utils/colors.dart';
-import 'package:weekly_planner/product/utils/custom_text_style.dart';
+import 'package:draxex_flutter_template/draxex.dart';
 
 class AppThemeBuilder {
   BuildContext context;
@@ -49,56 +49,56 @@ class AppThemeBuilder {
 
   TextTheme textTheme({required Color color}) {
     return TextTheme(
-      labelSmall: CustomTextStyle(context).style(
+      labelSmall: DraxexTextStyle(context).style(
         fontSize: 6,
         color: color,
       ),
-      labelMedium: CustomTextStyle(context).style(
+      labelMedium: DraxexTextStyle(context).style(
         fontSize: 8,
         color: color,
       ),
-      labelLarge: CustomTextStyle(context).style(
+      labelLarge: DraxexTextStyle(context).style(
         fontSize: 10,
         color: color,
       ),
-      bodySmall: CustomTextStyle(context).style(
+      bodySmall: DraxexTextStyle(context).style(
         fontSize: 12,
         color: color,
       ),
-      bodyMedium: CustomTextStyle(context).style(
+      bodyMedium: DraxexTextStyle(context).style(
         fontSize: 14,
         color: color,
       ),
-      bodyLarge: CustomTextStyle(context).style(
+      bodyLarge: DraxexTextStyle(context).style(
         fontSize: 16,
         color: color,
       ),
-      titleSmall: CustomTextStyle(context).style(
+      titleSmall: DraxexTextStyle(context).style(
         fontSize: 18,
         fontWeight: FontWeight.bold,
         color: color,
       ),
-      titleMedium: CustomTextStyle(context).style(
+      titleMedium: DraxexTextStyle(context).style(
         fontSize: 20,
         fontWeight: FontWeight.bold,
         color: color,
       ),
-      titleLarge: CustomTextStyle(context).style(
+      titleLarge: DraxexTextStyle(context).style(
         fontSize: 22,
         fontWeight: FontWeight.bold,
         color: color,
       ),
-      headlineSmall: CustomTextStyle(context).style(
+      headlineSmall: DraxexTextStyle(context).style(
         fontSize: 24,
         fontWeight: FontWeight.bold,
         color: color,
       ),
-      headlineMedium: CustomTextStyle(context).style(
+      headlineMedium: DraxexTextStyle(context).style(
         fontSize: 26,
         fontWeight: FontWeight.bold,
         color: color,
       ),
-      headlineLarge: CustomTextStyle(context).style(
+      headlineLarge: DraxexTextStyle(context).style(
         fontSize: 28,
         fontWeight: FontWeight.bold,
         color: color,

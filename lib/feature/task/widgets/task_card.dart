@@ -1,15 +1,10 @@
+import 'package:draxex_flutter_template/draxex.dart';
 import 'package:flutter/material.dart';
 import 'package:weekly_planner/feature/task/widgets/task_progress.dart';
 import 'package:weekly_planner/feature/task/widgets/task_remaining_time.dart';
 import 'package:weekly_planner/feature/task/widgets/task_subtasks_container.dart';
 import 'package:weekly_planner/feature/task/widgets/task_subtasks_title.dart';
 import 'package:weekly_planner/feature/task/widgets/task_tag_list.dart';
-import 'package:weekly_planner/product/utils/custom_box_shadow.dart';
-import 'package:weekly_planner/product/utils/custom_padding.dart';
-import 'package:weekly_planner/product/utils/custom_radius.dart';
-import 'package:weekly_planner/product/utils/custom_space.dart';
-import 'package:weekly_planner/product/widgets/custom_icon.dart';
-import 'package:weekly_planner/product/widgets/custom_text.dart';
 
 class TaskCard extends StatefulWidget {
   const TaskCard({super.key});
@@ -59,12 +54,12 @@ class _TaskCardState extends State<TaskCard> with TickerProviderStateMixin {
 
   Widget _taskMainCard() {
     return Container(
-      margin: CustomPadding().exceptBottomLarge,
+      margin: DraxexPadding().exceptBottomLarge,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           _taskTime(),
-          CustomSpace().verticalMedium,
+          DraxexSpace().verticalMedium,
           _taskContainer(),
         ],
       ),
@@ -73,13 +68,13 @@ class _TaskCardState extends State<TaskCard> with TickerProviderStateMixin {
 
   Container _taskContainer() {
     return Container(
-      padding: CustomPadding().allLarge,
+      padding: DraxexPadding().allLarge,
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.tertiary,
         borderRadius:
-            _isExpanded ? CustomRadius().topMedium : CustomRadius().allMedium,
+            _isExpanded ? DraxexRadius().topMedium : DraxexRadius().allMedium,
         boxShadow: [
-          CustomBoxShadow().boxShadow(),
+          DraxexBoxShadow().boxShadow(),
         ],
       ),
       child: _taskColumn(),
@@ -96,10 +91,10 @@ class _TaskCardState extends State<TaskCard> with TickerProviderStateMixin {
             TaskRemainingTime(),
           ],
         ),
-        CustomSpace().verticalMedium,
+        DraxexSpace().verticalMedium,
         _taskTitle(),
         const TaskProgress(),
-        CustomSpace().verticalMedium,
+        DraxexSpace().verticalMedium,
         _taskBottom(),
       ],
     );
@@ -113,7 +108,7 @@ class _TaskCardState extends State<TaskCard> with TickerProviderStateMixin {
           onTap: _expandSubTasks,
           isExpanded: _isExpanded,
         ),
-        const CustomIcon(
+        const DraxexIcon(
           icon: Icons.more_horiz,
           size: 32,
         ),
@@ -121,8 +116,8 @@ class _TaskCardState extends State<TaskCard> with TickerProviderStateMixin {
     );
   }
 
-  CustomText _taskTitle() {
-    return CustomText(
+  DraxexText _taskTitle() {
+    return DraxexText(
       text: "Create Design System",
       style: Theme.of(context).textTheme.bodyLarge!.copyWith(
             fontWeight: FontWeight.bold,
@@ -130,8 +125,8 @@ class _TaskCardState extends State<TaskCard> with TickerProviderStateMixin {
     );
   }
 
-  CustomText _taskTime() {
-    return CustomText(
+  DraxexText _taskTime() {
+    return DraxexText(
       text: "9.00 AM - 11.00 AM",
       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
             color: Theme.of(context).colorScheme.surface,

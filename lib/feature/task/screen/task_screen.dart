@@ -1,9 +1,8 @@
+import 'package:draxex_flutter_template/draxex.dart';
 import 'package:flutter/material.dart';
 import 'package:weekly_planner/feature/task/widgets/task_tabbar_view.dart';
 import 'package:weekly_planner/feature/task/widgets/task_top.dart';
 import 'package:weekly_planner/product/layouts/base_layout.dart';
-import 'package:weekly_planner/product/utils/custom_radius.dart';
-import 'package:weekly_planner/product/utils/size_config.dart';
 
 // TODO: add back button
 class TaskScreen extends StatefulWidget {
@@ -40,7 +39,7 @@ class _TaskScreenState extends State<TaskScreen> with TickerProviderStateMixin {
               width: SizeConfig.screenWidth,
               height: SizeConfig.screenHeight,
               decoration: BoxDecoration(
-                borderRadius: CustomRadius().allLarge,
+                borderRadius: DraxexRadius().allLarge,
                 color: Theme.of(context).colorScheme.background,
               ),
               child: TaskTabBarView(tabController: _tabController),

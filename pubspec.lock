@@ -69,11 +69,11 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: main
-      resolved-ref: "6dd030852fa858ac03bc31f695d49e9d0db86078"
+      ref: "0.0.2"
+      resolved-ref: "4db3ac1138ae92c62c47472397baf5109d0aabca"
       url: "https://github.com/draxexx/draxex_flutter_template.git"
     source: git
-    version: "0.0.1"
+    version: "0.0.2"
   easy_localization:
     dependency: "direct main"
     description:

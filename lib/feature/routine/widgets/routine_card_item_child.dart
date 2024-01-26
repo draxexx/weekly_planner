@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weekly_planner/product/helpers/date_helpers.dart';
-import 'package:weekly_planner/product/widgets/custom_sleek_circular_slider.dart';
-import 'package:weekly_planner/product/widgets/custom_text.dart';
+import 'package:draxex_flutter_template/draxex.dart';
 
 class RoutineCardItemChild extends StatelessWidget {
   const RoutineCardItemChild({
@@ -18,23 +17,23 @@ class RoutineCardItemChild extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          CustomText(
+          DraxexText(
             text: DateHelpers().dayLocalized(date),
             style: Theme.of(context).textTheme.titleSmall!.copyWith(
                   color: Theme.of(context).colorScheme.tertiary,
                 ),
           ),
-          const CustomSleekCircularSlider(initialValue: 30),
+          const DraxexSleekCircularSlider(initialValue: 30),
           Column(
             children: [
-              CustomText(
+              DraxexText(
                 text: "15 tasks left",
                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                       color: Theme.of(context).colorScheme.tertiary,
                     ),
               ),
               const SizedBox(height: 4),
-              CustomText(
+              DraxexText(
                 text: "3 tasks completed",
                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                       color: Theme.of(context).colorScheme.tertiary,

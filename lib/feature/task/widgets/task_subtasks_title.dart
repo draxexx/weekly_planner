@@ -1,8 +1,7 @@
+import 'package:draxex_flutter_template/draxex.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:weekly_planner/product/init/language/locale_keys.g.dart';
-import 'package:weekly_planner/product/widgets/custom_icon.dart';
-import 'package:weekly_planner/product/widgets/custom_text.dart';
 
 class TaskSubtasksTitle extends StatelessWidget {
   const TaskSubtasksTitle({
@@ -21,12 +20,12 @@ class TaskSubtasksTitle extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CustomText(
+          DraxexText(
             text: LocaleKeys.task_screen_task_card_subtasks.tr(),
             style: Theme.of(context).textTheme.bodyMedium!,
             textAlign: TextAlign.center,
           ),
-          CustomIcon(
+          DraxexIcon(
             icon:
                 isExpanded ? Icons.arrow_drop_up : Icons.arrow_drop_down_sharp,
             size: 24,

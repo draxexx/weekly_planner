@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weekly_planner/product/utils/colors.dart';
-import 'package:weekly_planner/product/utils/custom_box_shadow.dart';
-import 'package:weekly_planner/product/utils/size_config.dart';
-import 'package:weekly_planner/product/widgets/custom_text.dart';
+import 'package:draxex_flutter_template/draxex.dart';
 
 class RoutineCardItemTopNumber extends StatelessWidget {
   const RoutineCardItemTopNumber({
@@ -25,11 +23,11 @@ class RoutineCardItemTopNumber extends StatelessWidget {
         shape: BoxShape.circle,
         color: CustomColors.white,
         boxShadow: [
-          CustomBoxShadow().boxShadow(blurRadius: 7),
+          DraxexBoxShadow().boxShadow(blurRadius: 7),
         ],
       ),
       child: Center(
-        child: CustomText(
+        child: DraxexText(
           text: text,
           style: Theme.of(context).textTheme.titleLarge!.copyWith(
                 color: Theme.of(context).colorScheme.primary,

@@ -1,6 +1,5 @@
+import 'package:draxex_flutter_template/draxex.dart';
 import 'package:flutter/material.dart';
-import 'package:weekly_planner/product/utils/custom_padding.dart';
-import 'package:weekly_planner/product/widgets/custom_text.dart';
 
 class TaskTag extends StatelessWidget {
   const TaskTag({
@@ -16,13 +15,13 @@ class TaskTag extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: CustomPadding().rightMedium,
-      padding: CustomPadding().symmetricMedium,
+      margin: DraxexPadding().rightMedium,
+      padding: DraxexPadding().symmetricMedium,
       decoration: BoxDecoration(
         color: bgColor,
         borderRadius: BorderRadius.circular(16),
       ),
-      child: CustomText(
+      child: DraxexText(
         text: text.toUpperCase(),
         style:
             Theme.of(context).textTheme.bodySmall!.copyWith(color: textColor),

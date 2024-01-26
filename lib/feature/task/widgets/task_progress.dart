@@ -1,6 +1,5 @@
+import 'package:draxex_flutter_template/draxex.dart';
 import 'package:flutter/material.dart';
-import 'package:weekly_planner/product/utils/custom_space.dart';
-import 'package:weekly_planner/product/widgets/custom_text.dart';
 
 class TaskProgress extends StatelessWidget {
   const TaskProgress({super.key});
@@ -21,8 +20,8 @@ class TaskProgress extends StatelessWidget {
             borderRadius: BorderRadius.circular(4),
           ),
         ),
-        CustomSpace().horizontalMedium,
-        CustomText(
+        DraxexSpace().horizontalMedium,
+        DraxexText(
           text: "$progressText%",
           style: Theme.of(context).textTheme.bodySmall!.copyWith(
                 fontWeight: FontWeight.bold,
