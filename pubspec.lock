@@ -65,6 +65,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
+  draxex_flutter_template:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: main
+      resolved-ref: "6dd030852fa858ac03bc31f695d49e9d0db86078"
+      url: "https://github.com/draxexx/draxex_flutter_template.git"
+    source: git
+    version: "0.0.1"
   easy_localization:
     dependency: "direct main"
     description:
@@ -379,5 +388,5 @@ packages:
     source: hosted
     version: "1.0.3"
 sdks:
-  dart: ">=3.2.0 <4.0.0"
+  dart: ">=3.2.3 <4.0.0"
   flutter: ">=3.16.0"

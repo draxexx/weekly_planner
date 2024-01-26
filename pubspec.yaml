@@ -48,6 +48,12 @@ dependencies:
   # Localization
   easy_localization: ^3.0.3
 
+  # Draxex
+  draxex_flutter_template:
+    git:
+      url: https://github.com/draxexx/draxex_flutter_template.git
+      ref: main # branch name
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
